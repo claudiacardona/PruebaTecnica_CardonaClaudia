@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h4 class="card-title mb-0">Insertar Alumno</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Nombre del Alumno:</label>
+              <input type="text" id="name" name="name" [(ngModel)]="student.name" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="dob" class="form-label">Fecha de Nacimiento:</label>
+              <input type="date" id="dob" name="dob" [(ngModel)]="student.dob" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="fatherName" class="form-label">Nombre del Padre:</label>
+              <input type="text" id="fatherName" name="fatherName" [(ngModel)]="student.fatherName" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="motherName" class="form-label">Nombre de la Madre:</label>
+              <input type="text" id="motherName" name="motherName" [(ngModel)]="student.motherName" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="grade" class="form-label">Grado:</label>
+              <input type="text" id="grade" name="grade" [(ngModel)]="student.grade" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="section" class="form-label">Sección:</label>
+              <input type="text" id="section" name="section" [(ngModel)]="student.section" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="entryDate" class="form-label">Fecha de Ingreso:</label>
+          <input type="date" id="entryDate" name="entryDate" [(ngModel)]="student.entryDate" class="form-control" required>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success">Insertar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
