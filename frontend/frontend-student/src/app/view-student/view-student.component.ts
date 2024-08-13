@@ -3,17 +3,25 @@ import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-view-student',
-  templateUrl: './view-student.component.html'
+  templateUrl: './view-student.component.html',
+  styleUrls: ['./view-student.component.css']
 })
 export class ViewStudentComponent {
-  grade: string = '';
   students: any[] = [];
+  grade: string = ''; // Propiedad para almacenar el grado ingresado
 
   constructor(private studentService: StudentService) {}
 
-  fetchStudents() {
-    this.studentService.getStudentsByGrade(this.grade).subscribe(data => {
-      this.students = data;
-    });
+  onSearch() {
+    if (this.grade) {
+      this.studentService.getStudentsByGrade(this.grade).subscribe(
+        (data) => {
+          this.students = data;
+        },
+        (error) => {
+          console.error('Error fetching students:', error);
+        }
+      );
+    }
   }
 }
