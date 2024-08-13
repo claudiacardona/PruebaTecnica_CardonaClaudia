@@ -16,5 +16,5 @@ CREATE TABLE student (
   admissionDate DATE
 );
 
-# en el archivo .env en las varibles DB_PASSWORD y DB_DATABASE, agregar las respectivas contraseña y el nombre de la base de datos que le vaya 
-# agregar 
+# en el archivo .env en las varibles DB_PASSWORD y DB_DATABASE, agregar las respectivas contraseña y el nombre de la base de datos que se va agregar
+
